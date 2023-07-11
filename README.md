@@ -1,8 +1,10 @@
+[https://apify.com/epctex/xing-scraper](https://apify.com/epctex/xing-scraper?fpr=yhdrb)
+
 # Actor - XING Scraper
 
 ## XING scraper
 
-Since XING doesn't provide a good and free API, this actor should help you to retrieve data from it. This actor can provide you very detailed
+Since XING doesn't provide a good and free API, this actor should help you to retrieve data from it. This actor can provide you with very detailed
 
 The XING data scraper supports the following features:
 
@@ -12,13 +14,13 @@ The XING data scraper supports the following features:
 
 -   Scrape job - Fetch any job detail that has been published on XING.
 
--   Scrape profile - You can any person's profile on XING. It is structured and provides all the detail information.
+-   Scrape profile - You can any person's profile on XING. It is structured and provides all the detailed information.
 
--   Scrape community or group - You can scrape a specific community or group that people are included on.
+-   Scrape community or group - You can scrape a specific community or group that people are included in.
 
 -   Scrape company - You can scrape all the detailed information from the company profiles.
 
-## Bugs, fixes, updates and changelog
+## Bugs, fixes, updates, and changelog
 
 This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/epctex/xing-scraper/issues).
 
@@ -28,21 +30,21 @@ The input of this scraper should be JSON containing the list of pages on XING th
 
 - `search`: (Optional) (String) Keyword that you want to search on XING.
 
-- `startUrls`: (Optional) (Array) List of XING URLs. You should only provide profile, job, community, company, group or job search URLs.
+- `startUrls`: (Optional) (Array) List of XING URLs. You should only provide profile, job, community, company, group, or job search URLs.
 
 - `location`: (Optional) (String) Location that you want to filter your search on XING.
 
 - `radius`: (Optional) (Number) Radius that you want to filter your search on XING.
 
-- `endPage`: (Optional) (Number) Final number of page that you want to scrape. Default is `Infinite`. This is applies to all `search` request and `startUrls` individually.
+- `endPage`: (Optional) (Number) Final number of page that you want to scrape. The default is `Infinite`. This applies to all `search` requests and `startUrls` individually.
 
 - `maxItems`: (Optional) (Number) You can limit scraped items. This should be useful when you search through the big lists or search results.
 
 - `proxy`: (Required) (Proxy Object) Proxy configuration.
 
-- `extendOutputFunction`: (Optional) (String) Function that takes a JQuery handle ($) as argument and returns object with data.
+- `extendOutputFunction`: (Optional) (String) Function that takes a JQuery handle ($) as an argument and returns an object with data.
 
-- `customMapFunction`: (Optional) (String) Function that takes each objects handle as argument and returns object with executing the function.
+- `customMapFunction`: (Optional) (String) Function that takes each object's handle as an argument and returns the object with executing the function.
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
@@ -52,11 +54,11 @@ When you want to have a scrape over a specific item URL, just copy and paste the
 
 If you would like to scrape only the first page of a list then put the link for the page and have the `endPage` as 1.
 
-With the last approach that explained above you can also fetch any interval of pages. If you provide the 5th page of a list and define the `endPage` parameter as 6 then you'll have the 5th and 6th pages only.
+With the last approach that is explained above you can also fetch any interval of pages. If you provide the 5th page of a list and define the `endPage` parameter as 6 then you'll have the 5th and 6th pages only.
 
 ### Compute Unit Consumption
 
-The actor optimized to run blazing fast and scrape many as items as possible. Therefore, it forefronts all item detail requests. If actor doesn't block very often it'll scrape 100 items in 1 minute with ~0.04-0.08 compute units.
+The actor is optimized to run blazing fast and scrape many items as possible. Therefore, it forefronts all item detail requests. If the actor doesn't block very often it'll scrape 100 items in 1 minute with ~0.04-0.08 compute units.
 
 ### XING Scraper Input example
 
@@ -88,13 +90,13 @@ The actor optimized to run blazing fast and scrape many as items as possible. Th
 During the run, the actor will output messages letting you know what is going on. Each message always contains a short label specifying which page from the provided list is currently specified.
 When items are loaded from the page, you should see a message about this event with a loaded item count and total item count for each page.
 
-If you provide incorrect input to the actor, it will immediately stop with failure state and output an explanation of what is wrong.
+If you provide incorrect input to the actor, it will immediately stop with a failure state and output an explanation of what is wrong.
 
 ## XING Export
 
 During the run, the actor stores results into a dataset. Each item is a separate item in the dataset.
 
-You can manage the results in any languague (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this XING actor.
+You can manage the results in any language (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this XING actor.
 
 ## Scraped XING Output
 
@@ -585,7 +587,7 @@ The structure of each item in XING looks like this:
   },
   "description": {
     "html": "<h2 class=\"headlinestyles__Headline-sc-1gpssxl-0 bDwiDk Description-Description-headerText-e30a9498\">SPECTRUM AG</h2><div class=\"ReadMore-ReadMore-textArea-ba1c6451\" style=\"max-height:330px\"><div class=\"ReadMore-ReadMore-textAreaInner-ae570bdb\"><div class=\"content-editor-core-viewer-viewer-viewer-e66f7512\"><h3 class=\"content-editor-plugin-heading-Heading-heading-f58e97f8 content-editor-plugin-heading-Heading-heading3-a4a0f230\" data-editor-plugin=\"h3\">Wir machen aus Talenten Experten.</h3><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\"><strong>FÜR BERUFSEINSTEIGER</strong> finden wir einzigartige Einstiegsjobs, auch ohne Berufserfahrung.</p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\"><strong>FÜR UNTERNEHMEN</strong> bieten wir qualifizierte Nachwuchskräfte und erfahrene IT-Experten im Rundum-Sorglos-Paket. Mit unseren Upskilling Services helfen wir zudem bei der Weiterentwicklung ihrer Fach- und Führungskräfte.</p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\"><strong>Keine Berufserfahrung und auf der Suche nach einem Berufseinstieg?</strong></p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\">· Dann bewirb Dich für unser außergewöhnliches Traineeprogramm.</p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\">· Gemeinsam qualifizieren wir Dich für Deinen Traumjob.</p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\">· Wir schließen die Lücke zwischen dem, was Du im Studium gelernt hast und dem, was die Berufspraxis von Dir verlangen wird.</p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\">· Extra auf Dich abgestimmte Schulungsprogramme fungieren als Ergänzung zur Praxis.</p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\">· Deine Vorteile: unbefristeter Arbeitsvertrag, fairer Ausgleich zwischen Beruf und Freizeit, intensive Betreuung durch Deinen persönlichen Mentor, kollegiales und vertrauensvolles Miteinander, u.v.m.</p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\"><strong>FOLGE UNSEREM BLOG!</strong> Studium, Bewerbung und Berufseinstieg. Hier abonnieren und jeden Monat interessante und informative Beiträge für Junge Talente erhalten: </p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\"><a rel=\"nofollow\" class=\"content-editor-plugin-link-Link-link-fe1bcbc5\" href=\"https://newsroom.spectrum-ag.de/newsletter/\" target=\"_blank\">https://newsroom.spectrum-ag.de/newsletter/</a></p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\"><strong>Auf der Suche nach qualifizierten Talenten?</strong></p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\">· Egal ob aufgrund von Fachkräftemangel, Digitalisierung, demographischem Wandel oder anderen Herausforderungen: Wir haben, finden oder bilden die richtigen Talente für Ihr Unternehmen aus.</p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\">· Unsere Services:</p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\"><strong>CAREER SOLUTIONS</strong>: Nachwuchsprogramm für Ihre individuellen Vakanzen.</p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\"><strong>EXPERT RECRUITING+</strong>: Rekrutierung und Qualifizierung erfahrener Experten maßgeschneidert für Ihr Unternehmen.</p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\"><strong>UPSKILLING SERVICES</strong>: Individuelle Weiterentwicklung der digitalen Kompetenz Ihrer Fach- und Führungskräfte.</p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\"><strong>MEHR ERFAHREN</strong></p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\">Fragen, Feedback, mehr erfahren? Ganz einfach über:</p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\">Homepage:&nbsp;<a rel=\"nofollow\" class=\"content-editor-plugin-link-Link-link-fe1bcbc5\" href=\"http://www.spectrum-ag.de/de/\" target=\"_blank\">https://www.spectrum-ag.de/de/</a></p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\">Jobs: <a rel=\"nofollow\" class=\"content-editor-plugin-link-Link-link-fe1bcbc5\" href=\"https://jobs.spectrum-ag.de/Jobs\" target=\"_blank\">https://jobs.spectrum-ag.de/Jobs</a></p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\">Facebook:&nbsp;<a rel=\"nofollow\" class=\"content-editor-plugin-link-Link-link-fe1bcbc5\" href=\"https://www.facebook.com/spectrumag/\" target=\"_blank\">https://www.facebook.com/spectrumag/</a></p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\">Twitter:&nbsp;<a rel=\"nofollow\" class=\"content-editor-plugin-link-Link-link-fe1bcbc5\" href=\"https://twitter.com/spectrum_ag\" target=\"_blank\">https://twitter.com/spectrum ag</a></p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\">Instagram: <a rel=\"nofollow\" class=\"content-editor-plugin-link-Link-link-fe1bcbc5\" href=\"https://www.instagram.com/spectrum_ag/\" target=\"_blank\">https://www.instagram.com/spectrum ag/</a></p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\">LinkedIn:&nbsp;<a rel=\"nofollow\" class=\"content-editor-plugin-link-Link-link-fe1bcbc5\" href=\"https://www.linkedin.com/company/spectrum-ag\" target=\"_blank\">https://www.linkedin.com/company/spectrum-ag</a></p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\">YouTube:&nbsp;<a rel=\"nofollow\" class=\"content-editor-plugin-link-Link-link-fe1bcbc5\" href=\"https://www.youtube.com/channel/UCv-xR0JV0yx3iL0JMlkcYeQ\" target=\"_blank\">https://www.youtube.com/channel/UCv-xR0JV0yx3iL0JMlkcYeQ</a></p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\">Pinterest: <a rel=\"nofollow\" class=\"content-editor-plugin-link-Link-link-fe1bcbc5\" href=\"https://www.pinterest.de/spectrum_ag/_created/\" target=\"_blank\">https://www.pinterest.de/spectrum_ag/_created/</a></p><p class=\"content-editor-plugin-paragraph-Paragraph-paragraph-b59ad9d8 Description-Description-paragraph-e0037d80\">Impressum:&nbsp;<a rel=\"nofollow\" class=\"content-editor-plugin-link-Link-link-fe1bcbc5\" href=\"https://www.spectrum-ag.de/de/impressum/\" target=\"_blank\">https://www.spectrum-ag.de/de/impressum/</a></p></div></div></div>",
-    "text": "SPECTRUM AGWir machen aus Talenten Experten.FÜR BERUFSEINSTEIGER finden wir einzigartige Einstiegsjobs, auch ohne Berufserfahrung.FÜR UNTERNEHMEN bieten wir qualifizierte Nachwuchskräfte und erfahrene IT-Experten im Rundum-Sorglos-Paket. Mit unseren Upskilling Services helfen wir zudem bei der Weiterentwicklung ihrer Fach- und Führungskräfte.Keine Berufserfahrung und auf der Suche nach einem Berufseinstieg?· Dann bewirb Dich für unser außergewöhnliches Traineeprogramm.· Gemeinsam qualifizieren wir Dich für Deinen Traumjob.· Wir schließen die Lücke zwischen dem, was Du im Studium gelernt hast und dem, was die Berufspraxis von Dir verlangen wird.· Extra auf Dich abgestimmte Schulungsprogramme fungieren als Ergänzung zur Praxis.· Deine Vorteile: unbefristeter Arbeitsvertrag, fairer Ausgleich zwischen Beruf und Freizeit, intensive Betreuung durch Deinen persönlichen Mentor, kollegiales und vertrauensvolles Miteinander, u.v.m.FOLGE UNSEREM BLOG! Studium, Bewerbung und Berufseinstieg. Hier abonnieren und jeden Monat interessante und informative Beiträge für Junge Talente erhalten: https://newsroom.spectrum-ag.de/newsletter/Auf der Suche nach qualifizierten Talenten?· Egal ob aufgrund von Fachkräftemangel, Digitalisierung, demographischem Wandel oder anderen Herausforderungen: Wir haben, finden oder bilden die richtigen Talente für Ihr Unternehmen aus.· Unsere Services:CAREER SOLUTIONS: Nachwuchsprogramm für Ihre individuellen Vakanzen.EXPERT RECRUITING+: Rekrutierung und Qualifizierung erfahrener Experten maßgeschneidert für Ihr Unternehmen.UPSKILLING SERVICES: Individuelle Weiterentwicklung der digitalen Kompetenz Ihrer Fach- und Führungskräfte.MEHR ERFAHRENFragen, Feedback, mehr erfahren? Ganz einfach über:Homepage: https://www.spectrum-ag.de/de/Jobs: https://jobs.spectrum-ag.de/JobsFacebook: https://www.facebook.com/spectrumag/Twitter: https://twitter.com/spectrum agInstagram: https://www.instagram.com/spectrum ag/LinkedIn: https://www.linkedin.com/company/spectrum-agYouTube: https://www.youtube.com/channel/UCv-xR0JV0yx3iL0JMlkcYeQPinterest: https://www.pinterest.de/spectrum_ag/_created/Impressum: https://www.spectrum-ag.de/de/impressum/"
+    "text": "SPECTRUM AGWir machen aus Talenten Experten.FÜR BERUFSEINSTEIGER finden wir einzigartige Einstiegsjobs, auch ohne Berufserfahrung.FÜR UNTERNEHMEN bieten wir qualifizierte Nachwuchskräfte und erfahrene IT-Experten im Rundum-Sorglos-Paket. Mit unseren Upskilling Services helfen wir zudem bei der Weiterentwicklung ihrer Fach- und Führungskräfte.Keine Berufserfahrung und auf der Suche nach einem Berufseinstieg?· Dann bewirb Dich für unser außergewöhnliches Traineeprogramm.· Gemeinsam qualifizieren wir Dich für Deinen Traumjob.· Wir schließen die Lücke zwischen dem, was Du im Studium gelernt hast und dem, was die Berufspraxis von Dir verlangen wird.· Extra auf Dich abgestimmte Schulungsprogramme fungieren als Ergänzung zur Praxis.· Deine Vorteile: unbefristeter Arbeitsvertrag, fairer Ausgleich zwischen Beruf und Freizeit, intensive Betreuung durch Deinen persönlichen Mentor, kollegiales und vertrauensvolles Miteinander, u.v.m.FOLGE UNSEREM BLOG! Studium, Bewerbung und Berufseinstieg. Hier abonnieren und jeden Monat interessante und informative Beiträge für Junge Talente erhalten: https://newsroom.spectrum-ag.de/newsletter/Auf der Suche nach qualifizierten Talenten?· Egal ob aufgrund von Fachkräftemangel, Digitalisierung, demographischem Wandel oder anderen Herausforderungen: Wir haben, finden oder bilden die richtigen Talente für Ihr Unternehmen aus.· Unsere Services:CAREER SOLUTIONS: Nachwuchsprogramm für Ihre individuellen Vakanzen.EXPERT RECRUITING+: Rekrutierung und Qualifizierung erfahrener Experten maßgeschneidert für Ihr Unternehmen.UPSKILLING SERVICES: Individuelle Weiterentwicklung der digitalen Kompetenz Ihrer Fach- und Führungskräfte.MEHR ERFAHRENFragen, Feedback, mehr erfahren? Ganz einfach über:Homepage: https://www.spectrum-ag.de/de/Jobs: https://jobs.spectrum-ag.de/JobsFacebook: https://www.facebook.com/spectrumag/Twitter: https://twitter.com/spectrum agInstagram: https://www.instagram.com/spectrum ag/LinkedIn: https://www.linkedin.com/company/spectrum-agYouTube: https://www.youtube.com/channel/UCv-xR0JV0yx3iL0JMlkcYeQPinterest: https://www.pinterest.de/spectrum_ag/_created/Impressum: https://www.spectrum-ag.de/de/impressum/"
   },
   "foundedYear": "1986 gegründet",
   "legalNotice": "https://www.spectrum-ag.de/de/impressum/",
@@ -639,4 +641,4 @@ The structure of each item in XING looks like this:
 ```
 
 ## Contact
-Please visit us through [epctex.com](https://epctex.com) to see all the products that is available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [devops@epctex.com](mailto:devops@epctex.com) is at your service.
+Please visit us through [epctex.com](https://epctex.com) to see all the products that are available for you. If you are looking for any custom integration or so, please reach out to us through the chat box in [epctex.com](https://epctex.com). In need of support? [devops@epctex.com](mailto:devops@epctex.com) is at your service.
